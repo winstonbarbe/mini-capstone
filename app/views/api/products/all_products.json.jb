@@ -1,0 +1,8 @@
+@records.map do |record|
+    {
+      id: record.id,
+      name: record.name,
+      price: record.price,
+      description: record.description
+    }
+end
