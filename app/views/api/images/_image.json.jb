@@ -1,0 +1,5 @@
+{
+  id: image.id,
+  name: image.url,
+  price: image.product_id
+}

@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
 
   namespace :api do
-    get "/all_products_path" => "products#all_products_action"
-    get "/single_product_path" => "products#single_product_action"
-    get "/last_product_path" => "products#last_product_action"
+    get "/products" => "products#index"
+    get "/products/:id" => "products#show"
+    post "/products" => "products#create"
+    patch "/products/:id" => "products#update"
+    delete "/products/:id" => "products#destroy"
+    
+    get "/images" => "images#index"
+    get "/images/:id" => "images#show"
+    post "/images" => "images#create"
+    patch "/images/:id" => "images#update"
+    delete "/images/:id" => "images#destroy"
   end
 end
