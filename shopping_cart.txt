@@ -1,0 +1,19 @@
+
+4) Make a carted products create action. Assume the user is sending the product_id and quantity as the only parameters.
+
+5) Add an Insomnia request to add items to the cart (the carted products create action). (This will crash unless you provide the JWT in the headers...)
+
+6) Make a carted products index action. Note that this shouldn’t show ALL the carted products - it should only display the current user’s carted products that have a status of “carted”!
+
+7) Add an Insomnia request to view the shopping cart (the carted products index action). (This will crash unless you provide the JWT in the headers...)
+
+8) Change the orders create action to do the following:
+i) Find all of the current user’s carted products that have a status of “carted”.
+ii) Use that data to create a new row in the orders table, and save the user_id, subtotal, tax, and total.
+iii) Modify all the rows from the carted_products table so that their status changes to “purchased” and that they are given the appropriate order_id.
+
+9) Add an Insomnia request to purchase all items in the shopping cart (the orders create action) (This will crash unless you provide the JWT in the headers...)
+
+10) Add a carted products destroy action. This shouldn’t destroy the carted product - it should instead just update the status to “removed”.
+Rails g migration
+11) Add an Insomnia request to remove an item from the cart (the carted products destroy action)
