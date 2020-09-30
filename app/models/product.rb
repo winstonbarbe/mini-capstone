@@ -1,15 +1,13 @@
 class Product < ApplicationRecord
 
-  # validates :name, uniqueness: true, presence: true
-  # validates :description, length: { in: 10..500 }
-  # validates :price, numericality: { greater_than: 0 }
-  # validates :quantity, numericality: { greater_than: 0 }
+  validates :name, uniqueness: true, presence: true
+  validates :description, length: { in: 10..500 }
+  validates :price, numericality: { greater_than: 0 }
+  validates :quantity, numericality: { greater_than: 0 }
 
   # association method (instance method)
   belongs_to :supplier
-  # def supplier
-  #   Supplier.find_by(id: supplier_id)
-  # end
+
   has_many :images
   has_many :category_products
   has_many :categories, through: :category_products
