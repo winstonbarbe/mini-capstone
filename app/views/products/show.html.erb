@@ -2,6 +2,10 @@
 <h4><%= @product.description %></h4>
 <h4>Price: $<%= @product.price %></h4>
 <img src="<%= @product.images.first.url %>" alt="<%= @product.name %>"><br>
+<% if @product.images.second %>
+  <img src="<%= @product.images.second.url%>" alt="<%= @product.name %>"><br>
+<% end %>
 <h4>Quantity: <%= @product.quantity%></h4>
 <h4>Supplier: <%= @product.supplier.name%></h4>
+<a href="/products/<%= @product.id %>/edit">Edit Product</a>
 
